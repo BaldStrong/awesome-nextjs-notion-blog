@@ -1,9 +1,9 @@
 import { NotionAPI } from 'notion-client'
 import { ExtendedRecordMap, SearchParams, SearchResults } from 'notion-types'
+import pMap from 'p-map'
+import { fetchTweetAst } from 'static-tweets'
 import { getPreviewImages } from './get-preview-images'
 import { mapNotionImageUrl } from './map-image-url'
-import { fetchTweetAst } from 'static-tweets'
-import pMap from 'p-map'
 
 export const notion = new NotionAPI({
   apiBaseUrl: process.env.NOTION_API_BASE_URL
@@ -11,6 +11,7 @@ export const notion = new NotionAPI({
 
 export async function getPage(pageId: string): Promise<ExtendedRecordMap> {
   const recordMap = await notion.getPage(pageId)
+  // console.log("gyq\t"+pageId)
   const blockIds = Object.keys(recordMap.block)
 
   const imageUrls: string[] = blockIds
