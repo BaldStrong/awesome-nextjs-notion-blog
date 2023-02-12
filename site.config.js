@@ -40,7 +40,7 @@ module.exports = {
   // whether or not to enable support for LQIP preview images (optional)
   // NOTE: this requires you to set up Google Firebase and add the environment
   // variables specified in .env.example
-  isPreviewImageSupportEnabled: false,
+  isPreviewImageSupportEnabled: true,
 
   // set null to remove from year
   copyRightFromYear: 2022,
@@ -72,7 +72,7 @@ module.exports = {
   // },
   showPageAsideSocials: false,
   footCounterList: [
-    '6a76fdd9ec6d4ae2855aa790d620eec4',
+    '44c0ebd7448e4a8984ad0a5a7ada2c06',
     '651765de-6a0f-4a72-9f91-86f26381aef3'
   ]
 }
